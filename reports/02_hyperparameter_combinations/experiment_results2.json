@@ -1,0 +1,208 @@
+[
+  {
+    "name": "combo_3xMLP_8heads_highLR",
+    "success": true,
+    "val_bpb": 0.7594,
+    "pre_quant_bpb": 0.759,
+    "params": "690,464",
+    "model_size": "1,120,718 bytes (1.07 MB)",
+    "elapsed": "22.7s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "wider_3xMLP_highLR",
+    "success": true,
+    "val_bpb": 0.7619,
+    "pre_quant_bpb": 0.7621,
+    "params": "1,453,472",
+    "model_size": "1,545,160 bytes (1.47 MB)",
+    "elapsed": "33.9s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 192,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "4x_MLP",
+    "success": true,
+    "val_bpb": 0.757,
+    "pre_quant_bpb": 0.7573,
+    "params": "821,536",
+    "model_size": "1,369,843 bytes (1.31 MB)",
+    "elapsed": "24.6s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 4,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "extreme_gqa_1kv",
+    "success": true,
+    "val_bpb": 0.7584,
+    "pre_quant_bpb": 0.7584,
+    "params": "674,080",
+    "model_size": "1,092,431 bytes (1.04 MB)",
+    "elapsed": "23.3s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 1,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "best_200iters",
+    "success": true,
+    "val_bpb": 0.751,
+    "pre_quant_bpb": 0.752,
+    "params": "690,464",
+    "model_size": "1,170,600 bytes (1.12 MB)",
+    "elapsed": "39.8s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 200,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08,
+      "WARMDOWN_ITERS": 40,
+      "VAL_LOSS_EVERY": 50
+    }
+  },
+  {
+    "name": "wide_gqa_5x256",
+    "success": true,
+    "val_bpb": 0.7616,
+    "pre_quant_bpb": 0.7616,
+    "params": "3,053,096",
+    "model_size": "3,263,558 bytes (3.11 MB)",
+    "elapsed": "55.1s",
+    "config": {
+      "NUM_LAYERS": 5,
+      "MODEL_DIM": 256,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "very_high_lr",
+    "success": true,
+    "val_bpb": 0.7712,
+    "pre_quant_bpb": 0.7713,
+    "params": "690,464",
+    "model_size": "1,119,792 bytes (1.07 MB)",
+    "elapsed": "23.4s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.12,
+      "TIED_EMBED_LR": 0.15,
+      "SCALAR_LR": 0.12
+    }
+  },
+  {
+    "name": "softcap_50",
+    "success": true,
+    "val_bpb": 0.759,
+    "pre_quant_bpb": 0.7591,
+    "params": "690,464",
+    "model_size": "1,122,412 bytes (1.07 MB)",
+    "elapsed": "22.8s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08,
+      "LOGIT_SOFTCAP": 50.0
+    }
+  },
+  {
+    "name": "untied_embeddings",
+    "success": true,
+    "val_bpb": 0.7615,
+    "pre_quant_bpb": 0.7614,
+    "params": "821,536",
+    "model_size": "1,270,984 bytes (1.21 MB)",
+    "elapsed": "23.0s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "TIE_EMBEDDINGS": 0,
+      "MATRIX_LR": 0.08,
+      "EMBED_LR": 0.6,
+      "HEAD_LR": 0.008,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "grad_clip_1",
+    "success": true,
+    "val_bpb": 0.7517,
+    "pre_quant_bpb": 0.7516,
+    "params": "690,464",
+    "model_size": "1,122,700 bytes (1.07 MB)",
+    "elapsed": "22.7s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08,
+      "GRAD_CLIP_NORM": 1.0
+    }
+  }
+]

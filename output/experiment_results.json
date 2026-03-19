@@ -1,0 +1,210 @@
+[
+  {
+    "name": "baseline_tiny",
+    "success": true,
+    "val_bpb": 0.7537,
+    "pre_quant_bpb": 0.7537,
+    "params": "592,144",
+    "model_size": "964,615 bytes (0.92 MB)",
+    "quant_degradation": "-0.000066 BPB",
+    "elapsed": "22.4s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "deeper_6layers",
+    "success": true,
+    "val_bpb": 0.7574,
+    "pre_quant_bpb": 0.7572,
+    "params": "822,680",
+    "model_size": "1,394,248 bytes (1.33 MB)",
+    "quant_degradation": "0.000152 BPB",
+    "elapsed": "30.4s",
+    "config": {
+      "NUM_LAYERS": 6,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "wider_dim192",
+    "success": true,
+    "val_bpb": 0.7475,
+    "pre_quant_bpb": 0.7479,
+    "params": "1,232,272",
+    "model_size": "1,383,400 bytes (1.32 MB)",
+    "quant_degradation": "-0.000347 BPB",
+    "elapsed": "32.8s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 192,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "more_kv_heads",
+    "success": true,
+    "val_bpb": 0.7525,
+    "pre_quant_bpb": 0.7526,
+    "params": "657,680",
+    "model_size": "1,087,197 bytes (1.04 MB)",
+    "quant_degradation": "-0.000125 BPB",
+    "elapsed": "23.7s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 4,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "larger_mlp_3x",
+    "success": true,
+    "val_bpb": 0.7464,
+    "pre_quant_bpb": 0.7473,
+    "params": "723,216",
+    "model_size": "1,201,962 bytes (1.15 MB)",
+    "quant_degradation": "-0.000970 BPB",
+    "elapsed": "22.5s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 3,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "baseline_full_size",
+    "success": true,
+    "val_bpb": 0.8465,
+    "pre_quant_bpb": 0.8453,
+    "params": "17,059,912",
+    "model_size": "9,636,468 bytes (9.19 MB)",
+    "quant_degradation": "0.001196 BPB",
+    "elapsed": "102.5s",
+    "config": {
+      "NUM_LAYERS": 9,
+      "MODEL_DIM": 512,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 4,
+      "MLP_MULT": 2,
+      "ITERATIONS": 50,
+      "TRAIN_BATCH_TOKENS": 2048,
+      "TRAIN_SEQ_LEN": 256,
+      "VAL_LOSS_EVERY": 25
+    }
+  },
+  {
+    "name": "wider_fewer_layers",
+    "success": true,
+    "val_bpb": 0.7534,
+    "pre_quant_bpb": 0.753,
+    "params": "3,021,616",
+    "model_size": "3,466,952 bytes (3.31 MB)",
+    "quant_degradation": "0.000441 BPB",
+    "elapsed": "62.3s",
+    "config": {
+      "NUM_LAYERS": 6,
+      "MODEL_DIM": 256,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 4,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "many_heads",
+    "success": true,
+    "val_bpb": 0.749,
+    "pre_quant_bpb": 0.749,
+    "params": "559,392",
+    "model_size": "900,064 bytes (0.86 MB)",
+    "quant_degradation": "0.000028 BPB",
+    "elapsed": "22.1s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 8,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100
+    }
+  },
+  {
+    "name": "deep_narrow_8x96",
+    "success": true,
+    "val_bpb": 0.761,
+    "pre_quant_bpb": 0.7613,
+    "params": "617,888",
+    "model_size": "1,044,862 bytes (1.00 MB)",
+    "quant_degradation": "-0.000322 BPB",
+    "elapsed": "28.9s",
+    "config": {
+      "NUM_LAYERS": 8,
+      "MODEL_DIM": 96,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100,
+      "TRAIN_SEQ_LEN": 256
+    }
+  },
+  {
+    "name": "higher_lr",
+    "success": true,
+    "val_bpb": 0.7514,
+    "pre_quant_bpb": 0.7517,
+    "params": "592,144",
+    "model_size": "940,499 bytes (0.90 MB)",
+    "quant_degradation": "-0.000321 BPB",
+    "elapsed": "21.2s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.08,
+      "TIED_EMBED_LR": 0.1,
+      "SCALAR_LR": 0.08
+    }
+  },
+  {
+    "name": "lower_lr",
+    "success": true,
+    "val_bpb": 0.7785,
+    "pre_quant_bpb": 0.779,
+    "params": "592,144",
+    "model_size": "940,191 bytes (0.90 MB)",
+    "quant_degradation": "-0.000472 BPB",
+    "elapsed": "20.1s",
+    "config": {
+      "NUM_LAYERS": 4,
+      "MODEL_DIM": 128,
+      "NUM_HEADS": 4,
+      "NUM_KV_HEADS": 2,
+      "MLP_MULT": 2,
+      "ITERATIONS": 100,
+      "MATRIX_LR": 0.02,
+      "TIED_EMBED_LR": 0.025,
+      "SCALAR_LR": 0.02
+    }
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "mlp_type_comparison": [
+    {"name": "gelu", "bpb": 0.7382, "params": "690,464", "description": "Standard GELU MLP"},
+    {"name": "swiglu_4x", "bpb": 0.7387, "params": "825,632", "description": "SwiGLU with 4x MLP expansion"},
+    {"name": "geglu", "bpb": 0.7397, "params": "690,464", "description": "GeGLU MLP"},
+    {"name": "swiglu", "bpb": 0.7420, "params": "690,464", "description": "SwiGLU MLP (2/3 hidden for equal params)"},
+    {"name": "relu2_reference", "bpb": 0.7460, "params": "690,464", "description": "ReLU squared (baseline)"}
+  ],
+  "structural_changes": [
+    {"name": "shared_kv", "bpb": 0.7489, "params": "674,080", "description": "Shared K/V projections"},
+    {"name": "swiglu_parallel", "bpb": 0.7499, "params": "690,464", "description": "SwiGLU + parallel attn+MLP"},
+    {"name": "parallel_blocks", "bpb": 0.7525, "params": "690,464", "description": "Parallel attention + MLP"}
+  ],
+  "base_config": {
+    "num_layers": 4, "model_dim": 128, "num_heads": 8, "num_kv_heads": 2,
+    "mlp_mult": 3, "iterations": 200, "warmdown_iters": 40,
+    "matrix_lr": 0.08, "tied_embed_lr": 0.1, "scalar_lr": 0.08,
+    "grad_clip_norm": 1.0, "muon_momentum": 0.8, "beta2": 0.99, "qk_gain_init": 1.0
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "muon_sweep_additional": [
+    {"name": "muon_0.85", "bpb": 0.7531, "params": "690,464"},
+    {"name": "muon_0.8", "bpb": 0.7460, "params": "690,464"}
+  ],
+  "combined_best_runs": [
+    {"name": "combined_best_200iters", "bpb": 0.7513, "params": "690,464", "config": "muon=0.9, beta2=0.99, qk_gain=1.0"},
+    {"name": "combined_300iters", "bpb": 0.7485, "params": "690,464"},
+    {"name": "combined_500iters", "bpb": 0.7440, "params": "690,464"}
+  ],
+  "note": "Muon momentum 0.8 matches or beats 0.9. 500 iterations with best combined config gives 0.7440 BPB."
+}
