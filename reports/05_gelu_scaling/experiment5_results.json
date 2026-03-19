@@ -1,0 +1,15 @@
+{
+  "results": [
+    {"name": "gelu_500", "bpb": 0.7368, "pre_quant_bpb": 0.7369, "params": "690,464", "size": "1.11 MB", "elapsed": "82.6s"},
+    {"name": "gelu_200", "bpb": 0.7382, "pre_quant_bpb": 0.7382, "params": "690,464", "size": "1.08 MB", "elapsed": "35.7s"},
+    {"name": "relu2_500", "bpb": 0.7414, "pre_quant_bpb": 0.7416, "params": "690,464", "size": "1.11 MB", "elapsed": "84.3s"},
+    {"name": "gelu_dim192", "bpb": 0.7429, "pre_quant_bpb": 0.7432, "params": "1,453,472", "size": "1.56 MB", "elapsed": "124.3s"},
+    {"name": "gelu_1000", "bpb": 0.7576, "pre_quant_bpb": 0.7581, "params": "690,464", "size": "1.11 MB", "elapsed": "158.5s", "note": "OVERFITTING on synthetic data"},
+    {"name": "relu2_1000", "bpb": 0.7602, "pre_quant_bpb": 0.7598, "params": "690,464", "size": "1.12 MB", "elapsed": "163.7s", "note": "OVERFITTING on synthetic data"},
+    {"name": "gelu_6layer", "bpb": null, "note": "TIMEOUT after 600s"},
+    {"name": "gelu_dim192_6layer", "bpb": null, "note": "NOT RUN (crash before reaching)"},
+    {"name": "geglu_500", "bpb": null, "note": "NOT RUN (crash before reaching)"},
+    {"name": "geglu_1000", "bpb": null, "note": "NOT RUN (crash before reaching)"}
+  ],
+  "note": "Experiment 5 partially completed - gelu_6layer timed out at 600s, crashing the script before later experiments could run"
+}
